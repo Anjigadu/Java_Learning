@@ -1,0 +1,5 @@
+What is final keyword in Java?
+
+Final keyword, final variable, final method and class in java exampleFinal is a keyword or reserved word in java and can be applied to member variables, methods, class and local variables in Java. Once you make a reference final you are not allowed to change that reference and compiler will verify this and raise compilation error if you try to re-initialized final variables in java.
+
+
