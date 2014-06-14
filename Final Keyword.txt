@@ -1,5 +1,66 @@
+http://javarevisited.blogspot.in/2011/12/final-variable-method-class-java.html
+
 What is final keyword in Java?
+	Final is a keyword or reserved word in java and can be applied to 
+	member variables, methods, class and local variables in Java. Once you 
+	make a reference final you are not allowed to change that reference 
+	and compiler will verify this and raise compilation error if you try 
+	to re-initialized final variables in java.
+	
 
-Final keyword, final variable, final method and class in java exampleFinal is a keyword or reserved word in java and can be applied to member variables, methods, class and local variables in Java. Once you make a reference final you are not allowed to change that reference and compiler will verify this and raise compilation error if you try to re-initialized final variables in java.
+1. What is final variable in Java?
+	Any variable either member variable or local variable (declared inside 
+	method or block) modified by final keyword is called final variable. 
+	Final variables are often declare with static keyword in java and treated 
+	as constant. Here is an example of final variable in Java
+	
+		public static final String LOAN = "loan";
+		LOAN = new String("loan") //invalid compilation error
+
+	Final variables are by default read-only.
+	
+
+2. What is final method in Java?
+	Final keyword in java can also be applied to methods. A java method with 
+	final keyword is called final method and it can not be overridden in 
+	sub-class. You should make a method final in java if you think it’s complete 
+	and its behavior should remain constant in sub-classes. Final methods are 
+	faster than non-final methods because they are not required to be resolved 
+	during run-time and they are bonded on compile time. Here is an example 
+	of final method in Java:
+
+	class PersonalLoan{
+		public final String getName(){
+			return "personal loan";
+		}
+	}
+
+	class CheapPersonalLoan extends PersonalLoan{
+		@Override
+		public final String getName(){
+			return "cheap personal loan"; //compilation error: overridden method is final
+		}
+	}
+
+3. What is final Class in Java
+	Java class with final modifier is called final class in Java. 
+	Final class is complete in nature and can not be sub-classed or 
+	inherited. Several classes in Java are final e.g. String, Integer 
+	and other wrapper classes. Here is an example of final class in java
+	
+	final class PersonalLoan{
+
+	}
+
+	class CheapPersonalLoan extends PersonalLoan{  
+		//compilation error: cannot inherit from final class
+ 	}
 
 
+Benefits of final keyword in Java
+	Here are few benefits or advantage of using final keyword in Java:
+	1. Final keyword improves performance. Not just JVM can cache final 
+	   variable but also application can cache frequently use final variables.
+	2. Final variables are safe to share in multi-threading environment 
+	   without additional synchronization overhead.
+	3. Final keyword allows JVM to optimized method, variable or class.
