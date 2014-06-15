@@ -1,8 +1,27 @@
-/* PropertyTest.java
- - Copyright (c) 2014, HerongYang.com, All Rights Reserved.
- */
+/*
+ http://www.studytonight.com/java/package-in-java.php
 
-package mypackage;
+ Java - >  Built in packages  
+		1. lang
+		2. util
+		3. io
+		4. net
+		5. awt
+ 
+ 
+ import ->
+	import keyword is used to import the built in and user 
+	defined packages into your java source code.
+
+Note:
+import statement is used after the package statement.	
+ 
+
+To Read and understand: 
+	Static import
+	
+ */
+package mypackage;  // Creating a  package using package keyword.
 public class getproperties {
    public static void main(String[] a) {
       setProgramInfo();
