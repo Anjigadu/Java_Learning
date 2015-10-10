@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="run" name="Learning a Ant file creation...">
+
+	<property name="wsgen-cmd" value="C:\Program Files\Java\jdk1.7.0_25\bin\wsgen"/>
+	
+	<!--  Set global directories -->
+	<property name="build_dir" location="build"/>
+	<property name="jaxws_dir" location="src/com/prakash/web/jaxws/"/>
+	<property name="wsdl_dir" location="build/wsdl"/>
+	<property name="build_compile_dir" location="build/classes"/>
+	
+	
+	<target name="init">
+		<echo>Creating Necessary Directories</echo>
+		<mkdir dir="${build_dir}"/>
+		<mkdir dir="${wsdl_dir}" />
+		<mkdir dir="${build_compile_dir}"/>
+		<mkdir dir="${jaxws_dir}" />
+	</target>
+
+	<target name="run">
+		<java classname="com.prakash.ant.AntDemo">
+			<classpath path="Staging" />
+		</java>
+
+	</target>
+
+	<target name="wsgen" depends="compile">
+		<echo message="Entering Init"/>
+		<exec executable="${wsgen-cmd}"
+			  failonerror="false">
+			<arg value="-verbose"/>
+			<arg value="-classpath"/>
+			<arg value="${build_compile_dir}"/>
+			<arg value="-wsdl"/>
+			<arg value="-d"/>
+			<arg value="${build_compile_dir}"/>
+			<arg value="-r"/>
+			<arg value="${wsdl_dir}"/>
+			<arg value="-s"/>
+			<arg value="src/"/>
+			<arg value="-keep"/>
+			<arg value="com.prakash.web.HelloWorldImpl"/>
+		</exec>
+	</target>
+
+	<target name="compile" depends="init">
+		<echo>Compiling the source code</echo>
+		<javac includeantruntime="false" srcdir="./src" destdir="build/classes"/>
+	</target>
+
+	<target name="clean">
+		<echo>Removing everything from build directory</echo>
+		<delete dir="${wsdl_dir}"/>
+		<delete dir="build" failonerror="false" />
+		<delete dir="src\com\prakash\web\jaxws\"/>
+		<mkdir dir="build" />
+	</target>
+</project>
