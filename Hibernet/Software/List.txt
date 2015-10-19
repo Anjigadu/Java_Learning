@@ -1,1 +1,4 @@
 Software list used to run these examples.
+
+1. http://www.java2s.com/Code/Jar/s/Downloadslf4jlog4j12161jar.htm
+2. 
