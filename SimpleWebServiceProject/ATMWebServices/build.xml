@@ -48,7 +48,7 @@
 			<arg value="-s"/>
 			<arg value="src/"/>
 			<arg value="-keep"/>
-			<arg value="com.prakash.web.HelloWorldImpl"/>
+			<arg value="com.prakash.web.AtmServiceEndPointImpl"/>
 		</exec>
 	</target>
 
