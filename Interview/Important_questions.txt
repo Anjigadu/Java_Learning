@@ -1,0 +1,19 @@
+1.  Write a java code which explains wait(), notify(), notifyall() ?
+2.  Write a java program to "reverse a string"?
+3.  How can you implement a oops concept in java code?
+4.  What is difference between FileReader and FileStreamer?
+5.  What is difference between vector and arrays?
+6.  At what level, the lock is obtained for a "sysnchronized static method" and "syschronized instance method"?
+7.  Difference between Interface and Abstract Class?
+8.  What is immutable class?
+9.  How to write a custom immutable class?
+10. Suppose you have a list of student object with the field name and age. How can you sort the alist son basis of student name. 
+      Class student{
+        String name;
+        int age;
+      }
+11. What is difference between hash set and linked hashset?
+12. What is tree map?
+13. What is difference bewteen wait and sleep?
+14
+16. 
