@@ -31,6 +31,27 @@ This program is a good exercise for mastering loops e.g. for loop and while loop
 8. How to find if a number is power of 2 in Java?
 9. Write Java program to check if a number is palindrome in Java?
 10. Write a program in Java to find out if a number is prime in Java?
+Sol:
+ public class MyPrimeNumCheck {
+ 
+    public boolean isPrimeNumber(int number){
+         
+        for(int i=2; i<=number/2; i++){
+            if(number % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+     
+    public static void main(String a[]){
+        MyPrimeNumCheck mpc = new MyPrimeNumCheck();
+        System.out.println("Is 17 prime number? "+mpc.isPrimeNumber(17));
+        System.out.println("Is 19 prime number? "+mpc.isPrimeNumber(19));
+        System.out.println("Is 15 prime number? "+mpc.isPrimeNumber(15));
+    }
+}
+- See more at: http://java2novice.com/java-interview-programs/is-prime-number/#sthash.pG2WGiyQ.dpuf
 11. Write a program in Java to check if a number is even or odd in Java?
 
 
